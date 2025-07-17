@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Add to your style.css */
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-toggle img {
+  width: 30px;
+  height: 20px;
+}
+
+.dropdown-menu {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+  <label for="language-select" class="dropdown-toggle">
+    <img src="image/india-flag.svg" alt="India" id="selected-flag"> 
+    <span id="selected-language">Hindi</span>
+    <span class="arrow">&#9662;</span>
+  </label>
+  <select id="language-select" class="dropdown-menu">
+    <option value="hi" data-flag="image/india-flag.svg">Hindi</option>
+    <option value="be" data-flag="image/belgium.png">Belgium</option>
+    <option value="ie" data-flag="image/ireland.png">Ireland</option>
+    <option value="ua" data-flag="image/ukraine.png">Ukraine</option>
+    <option value="us" data-flag="image/united-states.png">United States</option>
+  </select>
+  <!-- Place before </body> -->
+<script>
+const select = document.getElementById('language-select');
+const flag = document.getElementById('selected-flag');
+const lang = document.getElementById('selected-language');
+
+select.addEventListener('change', function() {
+  const selected = select.options[select.selectedIndex];
+  flag.src = selected.getAttribute('data-flag');
+  lang.textContent = selected.textContent;
+});
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@media screen and (min-width:250px) and (max-width: 650px) {
+
+    font-family: 'Arial', sans-serif;
+  
+    nav #menu i {
+      display: relative ;
+      
+      color: white;
+    
+      margin-left: 10px;
+    }
+    nav #location,nav #search-box ,nav .dropdown {
+        display: none;
+    }
+
+    menu ul{
+        display: none;
+    }
+    menu #location-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
